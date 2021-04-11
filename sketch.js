@@ -13,7 +13,7 @@ function preload(){
 
 function setup(){
     canvas = createCanvas(800, 600);
-    song.play();
+    song.loop();
      wallg = new Group();
     //create 4 different surfaces
      block1 = createSprite(110, 560, 175, 40);
@@ -60,7 +60,7 @@ function draw() {
         ball.shapeColor = "orange";
         ball.velocityX = 0;
         ball.velocityY = 0;
-     //   song.stop();
+        song.pause();
     }
 
     if (block3.isTouching(ball) && ball.bounceOff(block3)){
